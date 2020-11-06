@@ -38,3 +38,7 @@ When you run Windows Terminal, use the arrow drop down to select Ubuntu
 Ruby uses "gems" to package and distribute code. To see a list of installed gems, `gem list` or `gem info` for more detail. If you `gem install whatever` it will install the code into the global gem list. But each project you are working on can also have its own private gem list, which is a best practice. So for this we use `bundler`.
 
 Bundler works by having a file called Gemfile in a directory, which you then declare what gems you want to use, and run bundle to install them. Go to the next commit to see this happen.
+
+## Step 2
+
+OK so we added a Gemfile, added the Sinatra gem, and ran `bundle`, which installed the code and created a Gemfile.lock file, which specifies the exact versions used. At any time you can delete the Gemfile.lock and re-run bundle to get the latest versions of everything.
