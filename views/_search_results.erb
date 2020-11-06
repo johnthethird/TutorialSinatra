@@ -1,0 +1,9 @@
+<ul>
+  <% if search_results.size == 0 %>
+    <b>Nothing Found!</b>
+  <% end %>
+
+  <% search_results.each do |result| %>
+    <li><%= result["Name"] %></li>
+  <% end %>
+</ul>

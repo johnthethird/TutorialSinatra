@@ -96,6 +96,19 @@ get '/surf_locations/:id' do
   erb :surf_location, {locals: {surf_location: surf_location}}
 end
 
+post '/surf_locations/search' do
+  # One way is to grab all records from Airtable, then filter them here in Ruby. This could be bad if there
+  # are a lot of records, and maybe should tell Airtable to filter them.
+
+  # This will find exact matches on name
+  locs = SurfLocation.all.filter{|loc| params["query"] == loc["Name"] }
+
+  # This one uses regular expressions to find all matches
+  #locs = SurfLocation.all.filter{|loc| /#{params["query"]}/i =~ loc["Name"] }
+
+  erb :_search_results, {locals: {search_results: locs}}
+end
+
 get '/debug' do
   binding.pry
 end
