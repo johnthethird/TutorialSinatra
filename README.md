@@ -42,3 +42,8 @@ Bundler works by having a file called Gemfile in a directory, which you then dec
 ## Step 2
 
 OK so we added a Gemfile, added the Sinatra gem, and ran `bundle`, which installed the code and created a Gemfile.lock file, which specifies the exact versions used. At any time you can delete the Gemfile.lock and re-run bundle to get the latest versions of everything.
+
+## Step 3
+
+Now we added the main `app.rb` and some views. You can run it by saying,
+`ruby app.rb` then going to "http://localhost:4567" in a browser.
