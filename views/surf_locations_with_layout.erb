@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Surf Locations</h1>
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+      <% surf_locations.each do |loc| %>
+        <tr>
+          <td><a href="/surf_locations/<%= loc.id %>"><%= loc['Name'] %></a></td>
+          <td><%= loc['Rating'] %></td>
+          <td><img src="<%= loc['Attachments'][0]['thumbnails']['small']['url'] %>"></img></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

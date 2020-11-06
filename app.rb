@@ -87,6 +87,10 @@ get '/surf_locations_haml' do
   haml :surf_locations, {locals: {surf_locations: SurfLocation.all}}
 end
 
+get '/surf_locations_with_layout' do
+  erb :surf_locations_with_layout, {layout: :application_layout, locals: {surf_locations: SurfLocation.all}}
+end
+
 get '/surf_locations/:id' do
   surf_location = SurfLocation.find(params['id'])
   erb :surf_location, {locals: {surf_location: surf_location}}
