@@ -1,8 +1,19 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    airrecord (1.0.5)
+      faraday (>= 0.10, < 2.0)
+      net-http-persistent (>= 2.9)
+    connection_pool (2.2.3)
+    dotenv (2.7.6)
+    faraday (1.1.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
+    multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    net-http-persistent (4.0.0)
+      connection_pool (~> 2.2)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -18,6 +29,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airrecord
+  dotenv
   sinatra
 
 BUNDLED WITH

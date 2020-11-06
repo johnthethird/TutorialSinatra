@@ -1,4 +1,7 @@
 require 'sinatra'
+require 'dotenv/load'
+require 'airrecord'
+
 set :protection, :except => :frame_options
 set :bind, '0.0.0.0'
 
@@ -55,4 +58,25 @@ get '/lowlevelbaby' do
   # You could also say 
   # return [200, {}, "Low Level"]
   # But Ruby *always* returns the last thing to run, so you dont have to explicitly say it
+end
+
+# Show whats in the ENV var. Of course, NEVER DO THIS IN PROD! It will expose all your secrets :)
+get '/env' do
+  ENV.inspect
+end
+
+#
+# AirTable Integration
+#
+
+Airrecord.api_key = ENV['AIRTABLE_API_KEY']
+
+class SurfLocation < Airrecord::Table
+  self.base_key = ENV['AIRTABLE_BASE_ID']
+  self.table_name = "SurfLocations"
+end
+
+
+get '/surf_locations' do
+  erb :surf_locations, {locals: {surf_locations: SurfLocation.all}}
 end

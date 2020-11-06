@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surfs Up!</title>
+  </head>
+  <body>
+    <h1>Surf Locations</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Rating</th>
+        <th></th>
+      </tr>
+      <% surf_locations.each do |loc| %>
+        <tr>
+          <td><%= loc['Name'] %></td>
+          <td><%= loc['Rating'] %></td>
+          <td><img src="<%= loc['Attachments'][0]['thumbnails']['small']['url'] %>"></img></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
