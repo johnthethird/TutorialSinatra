@@ -10,25 +10,20 @@
   </head>
   <body>
     <div class="container">
-      <h1>Surf Locations</h1>
-      <table class="table table-bordered table-hover">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Rating</th>
-          <th></th>
-        </tr>
-        </thead>
-        <tbody>
-          <% surf_locations.each do |loc| %>
-            <tr>
-              <td><a href="/surf_locations/<%= loc.id %>"><%= loc['Name'] %></a></td>
-              <td><%= loc['Rating'] %></td>
-              <td><img src="<%= loc['Attachments'][0]['thumbnails']['small']['url'] %>"></img></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <h1>Surf Location</h1>
+      <a href="/surf_locations">&lt;&nbsp;Back</a>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" height=150 src="<%= surf_location['Attachments'][0]['url'] %>" />
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= surf_location['Name'] %></h4>
+          <%= surf_location['Notes'] %>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

@@ -80,3 +80,8 @@ end
 get '/surf_locations' do
   erb :surf_locations, {locals: {surf_locations: SurfLocation.all}}
 end
+
+get '/surf_locations/:id' do
+  surf_location = SurfLocation.find(params['id'])
+  erb :surf_location, {locals: {surf_location: surf_location}}
+end
