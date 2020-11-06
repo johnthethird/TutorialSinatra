@@ -2,6 +2,7 @@ require 'sinatra'
 require 'dotenv/load'
 require 'airrecord'
 require 'pry'
+require 'haml'
 
 set :protection, :except => :frame_options
 set :bind, '0.0.0.0'
@@ -80,6 +81,10 @@ end
 
 get '/surf_locations' do
   erb :surf_locations, {locals: {surf_locations: SurfLocation.all}}
+end
+
+get '/surf_locations_haml' do
+  haml :surf_locations, {locals: {surf_locations: SurfLocation.all}}
 end
 
 get '/surf_locations/:id' do

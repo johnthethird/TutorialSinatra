@@ -8,3 +8,5 @@ gem 'airrecord'
 gem 'dotenv'
 
 gem 'pry'
+
+gem 'haml'

@@ -1,0 +1,27 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Surfs Up!
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    %link{crossorigin: "anonymous", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", rel: "stylesheet"}/
+    %link{crossorigin: "anonymous", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css", integrity: "sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r", rel: "stylesheet"}/
+  %body
+    .container
+      %h1 Surf Locations
+      %table.table.table-bordered.table-hover
+        %thead
+          %tr
+            %th Name
+            %th Rating
+            %th
+        %tbody
+          - surf_locations.each do |loc|
+            %tr
+              %td
+                %a{href: "/surf_locations/#{loc.id}"}= loc['Name']
+              %td= loc['Rating']
+              %td
+                %img{src: "#{loc['Attachments'][0]['thumbnails']['small']['url']}"}/
