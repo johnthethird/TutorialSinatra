@@ -6,3 +6,5 @@ gem 'sinatra'
 gem 'airrecord'
 
 gem 'dotenv'
+
+gem 'pry'

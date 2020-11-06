@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'dotenv/load'
 require 'airrecord'
+require 'pry'
 
 set :protection, :except => :frame_options
 set :bind, '0.0.0.0'
@@ -84,4 +85,8 @@ end
 get '/surf_locations/:id' do
   surf_location = SurfLocation.find(params['id'])
   erb :surf_location, {locals: {surf_location: surf_location}}
+end
+
+get '/debug' do
+  binding.pry
 end
