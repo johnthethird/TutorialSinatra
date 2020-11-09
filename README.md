@@ -47,3 +47,11 @@ OK so we added a Gemfile, added the Sinatra gem, and ran `bundle`, which install
 
 Now we added the main `app.rb` and some views. You can run it by saying,
 `ruby app.rb` then going to "http://localhost:4567" in a browser.
+
+
+# Resources
+
+Here is a page with a lot of Ruby / Dev resources to go through
+https://www.notion.so/Ruby-Resources-80758ead48694352b68d93e6bba205ef
+
+
