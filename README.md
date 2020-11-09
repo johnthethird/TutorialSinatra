@@ -57,3 +57,4 @@ https://www.notion.so/Ruby-Resources-80758ead48694352b68d93e6bba205ef
 
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/johnthethird/TutorialSinatra)
+
