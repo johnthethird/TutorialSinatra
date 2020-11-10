@@ -53,7 +53,8 @@ Now we added the main `app.rb` and some views. You can run it by saying,
 # Resources
 
 Here is a page with a lot of Ruby / Dev resources to go through
-https://www.notion.so/Ruby-Resources-80758ead48694352b68d93e6bba205ef
+
+[Ruby Resources](https://www.notion.so/Ruby-Resources-80758ead48694352b68d93e6bba205ef)
 
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/johnthethird/TutorialSinatra)
